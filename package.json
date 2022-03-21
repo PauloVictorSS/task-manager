@@ -1,0 +1,27 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "Gerenciador de tarefas",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PauloVictorSS/task-manager.git"
+  },
+  "author": "Paulo Victor de Souza Santos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PauloVictorSS/task-manager/issues"
+  },
+  "homepage": "https://github.com/PauloVictorSS/task-manager#readme"
+}
