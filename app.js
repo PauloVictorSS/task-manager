@@ -6,16 +6,17 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', './view');
 
-app.use(express.static('./public'));
+app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
 const port = process.env.PORT || 5000;
+const allTasks = [{description: "Conversar com o binho sobre o lead de ontem", id:"asd2fd54fdfs"}]
 
 app.get("/", (req, res, next) => {
 
     res.render('index.ejs', {
-        allTasks: [{name: "Lead de Ontem - conversar com o Binho", id:"asd2fd54fdfs"}]
+        allTasks
     })
 });
 
@@ -26,7 +27,9 @@ app.post("/", (req, res, next) => {
 
 app.get("/task/:id", (req, res, next) => {
 
-    res.send("Mostrando uma tarefa");
+    res.render('task.ejs', {
+        task: allTasks[0]
+    })
 });
 
 app.patch("/task/:id", (req, res, next) => {

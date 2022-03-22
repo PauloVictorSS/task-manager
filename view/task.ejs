@@ -1,0 +1,19 @@
+<%- include("includes/header.ejs") %>
+    <div class="block edit-task">
+
+        <h2>Gerenciador de Tarefas</h2>
+        <form action="" method="post">
+            <div class="d-flex">
+                <label>ID da Tarefa</label>
+                <p><%= task.id %></p>
+            </div>
+            <div class="d-flex">
+                <label>Descrição</label>
+                <input name="name" type="text" value="<%= task.description %>"/>
+            </div>
+            <button type="submit">Salvar Alterações</button>
+        </form>
+    </div>
+
+    <button id="back-to-home-btn"><a href="/">Voltar para as tarefas</a></button>
+<%- include("includes/footer.ejs") %>
