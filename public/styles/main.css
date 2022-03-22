@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400');
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+
+    --primary-0: #938dff;
+    --primary-50: #645cff;
+    --primary-100: #4640b3;
+
+    --grey-0: #fafbfc;
+    --grey-50: #f2f4f8;
+    --grey-100: #eaedf3;
+    --grey-1000: #333538;
+
+    --headingFont: 'Inconsolata', monospace;
+    --bodyFont: 'Montserrat', sans-serif;
+    --smallText: 0.7em;
+
+    --backgroundColor: var(--grey-50);
+    --textColor: var(--grey-1000);
+    --borderRadius: 0.25rem;
+    --letterSpacing: 1px;
+    --transition: 0.3s ease-in-out all;
+}
+
+body{
+    background: var(--backgroundColor);
+    color: var(--textColor);
+    font-family: var(--bodyFont);
+    font-weight: 400;
+}
+
+input{
+
+    padding: 5px;
+
+    background: var(--grey-50);
+    border-color: transparent;
+}
+
+button{
+    padding: 5px;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+input:focus{
+    outline: 0;
+} 
+
+.block{
+    background: var(--grey-0);
+
+    width: 95%;
+    max-width: 600px;
+
+    margin: 30px auto 10px;
+    padding: 30px 30px;
+
+    border-radius: 1px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Formulário para adicionar uma tarefa */
+.block.add-task h2{
+    text-align: center;
+    font-weight: 400;
+}
+
+.block.add-task form{
+
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+.block.add-task form input{
+    width: calc(100% - 100px);
+
+    border-radius: 5px 0 0 5px;
+}
+
+.block.add-task form button{
+    width: 100px;
+
+    color: white;
+    background-color: var(--primary-50);
+
+    border-radius: 0 5px 5px 0;
+}
+
+/* Bloco da tarefa */
+.block.task{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.block.task .options{
+
+    width: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.block.task .options a,
+.block.task .options button{
+    margin: 0;
+    padding: 0;
+}
+
+.block.task .options a{
+    color: green;
+}
+.block.task .options button{
+    color: var(--primary-100);
+}
+
+.block.task .options i{
+
+    font-size: 21px;
+}

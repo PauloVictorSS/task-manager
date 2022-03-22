@@ -3,14 +3,20 @@ require('dotenv').config();
 
 const app = express();
 
-app.use(express.static('./'));
+app.set('view engine', 'ejs');
+app.set('views', './view');
+
+app.use(express.static('./public'));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }))
 
 const port = process.env.PORT || 5000;
 
 app.get("/", (req, res, next) => {
 
-    res.send("Ver todas as tarefas");
+    res.render('index.ejs', {
+        allTasks: [{name: "Lead de Ontem - conversar com o Binho", id:"asd2fd54fdfs"}]
+    })
 });
 
 app.post("/", (req, res, next) => {
