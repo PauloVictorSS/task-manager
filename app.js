@@ -22,7 +22,8 @@ app.get("/", (req, res, next) => {
 
 app.post("/", (req, res, next) => {
 
-    res.send("Adicionando uma tarefa");
+    console.log("Adicionando uma tarefa");
+    console.log(req.body);
 });
 
 app.get("/task/:id", (req, res, next) => {

@@ -1,9 +1,20 @@
-const tasksDOM = document.querySelector('.tasks')
+const formDOM = document.querySelector('.task-form')
 
-
-function completTaks(e) {
-
-    const id = document.querySelector("").parentElement.dataset.id;
-
-    console.log(id);
+function getNewID() {
+    
 }
+
+
+formDOM.addEventListener('submit', async (e) => {
+
+    e.preventDefault()
+    const description = document.querySelector('form input#description').value;
+
+    try {
+        await axios.post('/', { description });
+    } catch (error) {
+        
+        console.log(error);
+    }
+
+})
