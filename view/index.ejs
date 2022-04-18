@@ -2,7 +2,7 @@
     <div class="block add-task">
 
         <h2>Gerenciador de Tarefas</h2>
-        <form action="" method="post">
+        <form action="/" method="post">
             <input name="description" type="text" placeholder="Enviar o relatório..."/>
             <button type="submit">Adicionar</button>
         </form>
@@ -16,7 +16,7 @@
                             <a href="/task/<%= task.id %>">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <button>
+                            <button class="delete-btn tasks" data-id="<%= task.id %>" onclick="completTaks()">
                                 <i class="fa-solid fa-circle-check"></i>
                             </button>
                         </div>
